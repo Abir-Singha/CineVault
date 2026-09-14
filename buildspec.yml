@@ -1,0 +1,30 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Starting CineVault build..."
+
+  pre_build:
+    commands:
+      - echo "Validating CineVault project structure..."
+      - test -f index.html
+      - test -f watchlist.html
+      - test -f css/style.css
+      - test -f js/app.js
+      - test -f js/data.js
+      - test -f js/watchlist.js
+      - echo "Project structure validation successful."
+
+  build:
+    commands:
+      - echo "Preparing CineVault deployment package..."
+
+  post_build:
+    commands:
+      - echo "CineVault build completed successfully."
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
