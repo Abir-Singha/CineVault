@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CineVault | My Watchlist</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">◆</span>
+                CINE<span>VAULT</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html#home">
+                    Home
+                </a>
+
+                <a href="index.html#trending">
+                    Trending
+                </a>
+
+                <a href="index.html#popular">
+                    Popular
+                </a>
+
+                <a href="index.html#top-rated">
+                    Top Rated
+                </a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a
+                    href="watchlist.html"
+                    class="watchlist-link"
+                >
+                    ♥
+                    <span>Watchlist</span>
+
+                    <span
+                        class="watchlist-count"
+                        id="watchlistCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section
+            class="content-section"
+            style="padding-top: 140px;"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR COLLECTION
+                    </span>
+
+                    <h2>
+                        My Watchlist
+                    </h2>
+
+                </div>
+
+                <span
+                    class="movie-count"
+                    id="watchlistTotal"
+                >
+                    0 movies
+                </span>
+
+            </div>
+
+
+            <div
+                class="movie-grid"
+                id="watchlistGrid"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    <span class="logo-symbol">◆</span>
+                    CINE<span>VAULT</span>
+                </a>
+
+                <p>
+                    Discover. Save. Watch Later.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#trending">
+                    Trending
+                </a>
+
+                <a href="index.html#popular">
+                    Popular
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                CineVault frontend demonstration project.
+            </p>
+
+            <p>
+                © 2026 CineVault.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- MOVIE MODAL -->
+
+    <div
+        class="modal hidden"
+        id="movieModal"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+            >
+                ×
+            </button>
+
+            <div
+                class="modal-poster"
+                id="modalPoster"
+            ></div>
+
+            <div class="modal-info">
+
+                <span class="section-label">
+                    MOVIE DETAILS
+                </span>
+
+                <h2 id="modalTitle"></h2>
+
+                <div class="modal-meta">
+
+                    <span class="rating">
+                        ★
+                        <span id="modalRating"></span>
+                    </span>
+
+                    <span id="modalYear"></span>
+
+                    <span id="modalGenre"></span>
+
+                    <span id="modalDuration"></span>
+
+                </div>
+
+                <p
+                    class="modal-tagline"
+                    id="modalTagline"
+                ></p>
+
+                <p id="modalDescription"></p>
+
+                <button
+                    class="primary-button"
+                    id="modalWatchlistButton"
+                >
+                    ♡ Add to Watchlist
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/watchlist.js"></script>
+
+</body>
+
+</html>
